@@ -1,0 +1,11 @@
+{
+  "operation": "create",
+  "branchComplexity": "medium",
+  "brief": "폐쇄를 앞둔 관측소에서 조사관이 출입증과 관측 기록을 조사한다. 관리인은 설비 고장을 숨기지만 방문객의 안전을 걱정한다. 조사와 설득에 따라 고장의 원인을 알아내고 협력하거나, 기록만 확보하고 떠나거나, 증거 없이 철수한다.\n\n결말:\n- 원인을 밝혀 관리인과 함께 설비를 복구한다.\n- 기록을 확보했지만 설비를 복구하지 못하고 떠난다.\n- 원인을 밝히지 못하고 철수한다.",
+  "settings": {
+    "mode": "openai-compatible",
+    "endpoint": "https://api.openai.com/v1",
+    "model": "gpt-6-luna",
+    "temperature": 0
+  }
+}

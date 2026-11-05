@@ -1,0 +1,675 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ChapterFlow gameplay v1",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "chapter-gameplay-v1"
+    },
+    "branchPolicy": {
+      "const": "existing-symbol-results-v1"
+    },
+    "startEventId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "initialState": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "type": "object",
+            "properties": {
+              "symbol": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "args": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 80
+                },
+                "maxItems": 2
+              }
+            },
+            "required": [
+              "symbol",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "$comment": "Additional semantic/refinement rules enforced by the TypeScript validator; see CONTRACT.md."
+              }
+            ]
+          }
+        },
+        "required": [
+          "ref",
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 256
+    },
+    "addedSymbols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "type": "object",
+            "properties": {
+              "symbol": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "args": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 80
+                },
+                "maxItems": 2
+              }
+            },
+            "required": [
+              "symbol",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "meaning": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "boolean",
+              "number"
+            ]
+          },
+          "initial": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "$comment": "Additional semantic/refinement rules enforced by the TypeScript validator; see CONTRACT.md."
+              }
+            ]
+          },
+          "changeMode": {
+            "type": "string",
+            "enum": [
+              "free",
+              "irreversible"
+            ]
+          }
+        },
+        "required": [
+          "ref",
+          "name",
+          "meaning",
+          "type",
+          "initial",
+          "changeMode"
+        ],
+        "additionalProperties": false,
+        "$comment": "Additional semantic/refinement rules enforced by the TypeScript validator; see CONTRACT.md."
+      },
+      "maxItems": 80
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "startTrigger": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "entryCondition": {
+            "type": "object",
+            "properties": {
+              "all": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ref": {
+                      "type": "object",
+                      "properties": {
+                        "symbol": {
+                          "type": "string",
+                          "maxLength": 80
+                        },
+                        "args": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "maxLength": 80
+                          },
+                          "maxItems": 2
+                        }
+                      },
+                      "required": [
+                        "symbol",
+                        "args"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "op": {
+                      "type": "string",
+                      "enum": [
+                        "eq",
+                        "ne",
+                        "lt",
+                        "lte",
+                        "gt",
+                        "gte"
+                      ]
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1,
+                          "$comment": "Additional semantic/refinement rules enforced by the TypeScript validator; see CONTRACT.md."
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "ref",
+                    "op",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 72
+              }
+            },
+            "required": [
+              "all"
+            ],
+            "additionalProperties": false
+          },
+          "entryAlternatives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "ref": {
+                        "type": "object",
+                        "properties": {
+                          "symbol": {
+                            "type": "string",
+                            "maxLength": 80
+                          },
+                          "args": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "maxLength": 80
+                            },
+                            "maxItems": 2
+                          }
+                        },
+                        "required": [
+                          "symbol",
+                          "args"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "eq",
+                          "ne",
+                          "lt",
+                          "lte",
+                          "gt",
+                          "gte"
+                        ]
+                      },
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1,
+                            "$comment": "Additional semantic/refinement rules enforced by the TypeScript validator; see CONTRACT.md."
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "ref",
+                      "op",
+                      "value"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 72
+                }
+              },
+              "required": [
+                "all"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 256
+          },
+          "endingId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "signals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240
+                },
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240
+                },
+                "condition": {
+                  "type": "object",
+                  "properties": {
+                    "all": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ref": {
+                            "type": "object",
+                            "properties": {
+                              "symbol": {
+                                "type": "string",
+                                "maxLength": 80
+                              },
+                              "args": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "maxLength": 80
+                                },
+                                "maxItems": 2
+                              }
+                            },
+                            "required": [
+                              "symbol",
+                              "args"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "op": {
+                            "type": "string",
+                            "enum": [
+                              "eq",
+                              "ne",
+                              "lt",
+                              "lte",
+                              "gt",
+                              "gte"
+                            ]
+                          },
+                          "value": {
+                            "anyOf": [
+                              {
+                                "type": "boolean"
+                              },
+                              {
+                                "type": "number",
+                                "minimum": 0,
+                                "maximum": 1,
+                                "$comment": "Additional semantic/refinement rules enforced by the TypeScript validator; see CONTRACT.md."
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "ref",
+                          "op",
+                          "value"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "maxItems": 72
+                    }
+                  },
+                  "required": [
+                    "all"
+                  ],
+                  "additionalProperties": false
+                },
+                "effects": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "ref": {
+                        "type": "object",
+                        "properties": {
+                          "symbol": {
+                            "type": "string",
+                            "maxLength": 80
+                          },
+                          "args": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "maxLength": 80
+                            },
+                            "maxItems": 2
+                          }
+                        },
+                        "required": [
+                          "symbol",
+                          "args"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "set",
+                          "add"
+                        ]
+                      },
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "number",
+                            "minimum": -1,
+                            "maximum": 1,
+                            "$comment": "Additional semantic/refinement rules enforced by the TypeScript validator; see CONTRACT.md."
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "ref",
+                      "op",
+                      "value"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 24
+                },
+                "oncePerVisit": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "label",
+                "condition",
+                "effects",
+                "oncePerVisit"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 256
+          },
+          "exits": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "to": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240
+                },
+                "requiredSignal": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240
+                },
+                "condition": {
+                  "type": "object",
+                  "properties": {
+                    "all": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ref": {
+                            "type": "object",
+                            "properties": {
+                              "symbol": {
+                                "type": "string",
+                                "maxLength": 80
+                              },
+                              "args": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "maxLength": 80
+                                },
+                                "maxItems": 2
+                              }
+                            },
+                            "required": [
+                              "symbol",
+                              "args"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "op": {
+                            "type": "string",
+                            "enum": [
+                              "eq",
+                              "ne",
+                              "lt",
+                              "lte",
+                              "gt",
+                              "gte"
+                            ]
+                          },
+                          "value": {
+                            "anyOf": [
+                              {
+                                "type": "boolean"
+                              },
+                              {
+                                "type": "number",
+                                "minimum": 0,
+                                "maximum": 1,
+                                "$comment": "Additional semantic/refinement rules enforced by the TypeScript validator; see CONTRACT.md."
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "ref",
+                          "op",
+                          "value"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "maxItems": 72
+                    }
+                  },
+                  "required": [
+                    "all"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "to",
+                "requiredSignal",
+                "condition"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 256
+          }
+        },
+        "required": [
+          "id",
+          "startTrigger",
+          "entryCondition",
+          "endingId",
+          "signals",
+          "exits"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "endings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "endingId": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "object",
+            "properties": {
+              "all": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ref": {
+                      "type": "object",
+                      "properties": {
+                        "symbol": {
+                          "type": "string",
+                          "maxLength": 80
+                        },
+                        "args": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "maxLength": 80
+                          },
+                          "maxItems": 2
+                        }
+                      },
+                      "required": [
+                        "symbol",
+                        "args"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "op": {
+                      "type": "string",
+                      "enum": [
+                        "eq",
+                        "ne",
+                        "lt",
+                        "lte",
+                        "gt",
+                        "gte"
+                      ]
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1,
+                          "$comment": "Additional semantic/refinement rules enforced by the TypeScript validator; see CONTRACT.md."
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "ref",
+                    "op",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 72
+              }
+            },
+            "required": [
+              "all"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "endingId",
+          "condition"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 6
+    }
+  },
+  "required": [
+    "format",
+    "startEventId",
+    "initialState",
+    "events",
+    "endings"
+  ],
+  "additionalProperties": false
+}

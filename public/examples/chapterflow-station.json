@@ -1,0 +1,2779 @@
+{
+  "schemaVersion": "0.6",
+  "storyId": "symbolic-f04ef20f-0c59-49b4-bdc4-5a022f9b9e0d",
+  "title": "비극의 해안 기차역",
+  "meta": {
+    "author": "symbolic-story-projection",
+    "createdAt": "f04ef20f-0c59-49b4-bdc4-5a022f9b9e0d",
+    "llmDefault": "symbolic"
+  },
+  "personas": [
+    {
+      "id": "chr_player",
+      "displayName": "player",
+      "mbti": "INFP",
+      "personaSentences": [
+        "A symbolic story character."
+      ],
+      "speechStyle": "Neutral.",
+      "goals": "Participate in the story.",
+      "relationships": []
+    },
+    {
+      "id": "chr_person_2",
+      "displayName": "person 2",
+      "mbti": "INFP",
+      "personaSentences": [
+        "A symbolic story character."
+      ],
+      "speechStyle": "Neutral.",
+      "goals": "Participate in the story.",
+      "relationships": []
+    }
+  ],
+  "locations": [
+    {
+      "id": "loc_place_1",
+      "name": "place 1",
+      "backgroundImage": "",
+      "situation": "Symbolic story location.",
+      "timeOfDay": "",
+      "props": []
+    },
+    {
+      "id": "loc_place_2",
+      "name": "place 2",
+      "backgroundImage": "",
+      "situation": "Symbolic story location.",
+      "timeOfDay": "",
+      "props": []
+    },
+    {
+      "id": "loc_place_3",
+      "name": "place 3",
+      "backgroundImage": "",
+      "situation": "Symbolic story location.",
+      "timeOfDay": "",
+      "props": []
+    }
+  ],
+  "variables": [],
+  "symbolic": {
+    "approval": {
+      "brief": "비 오는 밤, 폐쇄 직전의 해안 기차역에서 사라진 언니의 행방을 찾는 이야기.\n플레이어와 야간 역무원 서윤이 등장한다.\n은색 열쇠, 기록실, 폐쇄 승강장이 중요하다.\n언니 실종의 진실을 서윤이 알고 있지만 본인의 잘못이 엮여 있어 이를 숨기고 있다.\n\n결말:\n- 서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다.\n- 서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다.\n- 진실을 알아내지 못한다.\n\n분위기는 조용하고 불안한 현대 판타지 미스터리.\n\n자동 보완한 작가용 배경 설정 (플레이어가 이미 아는 사실이 아님):\n언니는 사실 서윤이 과거에 저지른 치명적인 업무상 과실로 인해 폐쇄 승강장에서 추락 사고를 당했으며, 서윤은 이를 은폐하기 위해 기록실의 관련 문서를 조작했다. 서윤은 언니를 그리워하면서도 자신의 사회적 파멸을 막기 위해 진실을 숨기려 하며, 플레이어에게는 협조적인 태도를 취하면서도 결정적인 증거가 담긴 기록은 교묘히 회피한다. 서윤은 플레이어와 완전히 단절할 경우 언니의 유품이나 행방에 대한 단서를 영영 잃게 되므로, 플레이어에게 최소한의 정보와 은색 열쇠의 위치를 제공하는 대가로 플레이어가 기록실의 핵심 구역에 접근하지 못하도록 유도한다.",
+      "contract": {
+        "entityLabels": [
+          {
+            "id": "player",
+            "label": "플레이어"
+          },
+          {
+            "id": "person_2",
+            "label": "서윤"
+          },
+          {
+            "id": "item_1",
+            "label": "은색 열쇠"
+          },
+          {
+            "id": "place_1",
+            "label": "해안 기차역"
+          },
+          {
+            "id": "place_2",
+            "label": "기록실"
+          },
+          {
+            "id": "place_3",
+            "label": "폐쇄 승강장"
+          }
+        ],
+        "entities": {
+          "characters": [
+            "player",
+            "person_2"
+          ],
+          "items": [
+            "item_1"
+          ],
+          "locations": [
+            "place_1",
+            "place_2",
+            "place_3"
+          ]
+        },
+        "stateSymbols": [
+          {
+            "id": "fact_1",
+            "meaning": "플레이어가 은색 열쇠를 가지고 있다.",
+            "type": "boolean",
+            "parameterCount": 1
+          },
+          {
+            "id": "fact_2",
+            "meaning": "기록실의 문이 열려 있다.",
+            "type": "boolean",
+            "parameterCount": 1
+          },
+          {
+            "id": "fact_3",
+            "meaning": "플레이어가 기록실의 원본 기록을 읽어 언니 실종의 실제 경위를 확인했다.",
+            "type": "boolean",
+            "parameterCount": 1
+          },
+          {
+            "id": "fact_4",
+            "meaning": "플레이어가 서윤에게 언니 실종의 실제 경위를 직접 들었다.",
+            "type": "boolean",
+            "parameterCount": 1
+          },
+          {
+            "id": "fact_5",
+            "meaning": "플레이어가 언니 실종의 실제 경위를 알았다.",
+            "type": "boolean",
+            "parameterCount": 1
+          },
+          {
+            "id": "fact_6",
+            "meaning": "플레이어가 서윤을 용서했다.",
+            "type": "boolean",
+            "parameterCount": 1
+          }
+        ],
+        "relationshipSymbols": [],
+        "endings": [
+          {
+            "id": "ending_1",
+            "label": "서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다."
+          },
+          {
+            "id": "ending_2",
+            "label": "서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다."
+          },
+          {
+            "id": "ending_3",
+            "label": "진실을 알아내지 못한다."
+          }
+        ]
+      },
+      "playerId": "player",
+      "revision": "f04ef20f-0c59-49b4-bdc4-5a022f9b9e0d"
+    },
+    "outcomes": {
+      "revision": "f04ef20f-0c59-49b4-bdc4-5a022f9b9e0d",
+      "initialState": [
+        {
+          "ref": {
+            "symbol": "fact_1",
+            "args": [
+              "player"
+            ]
+          },
+          "value": false
+        },
+        {
+          "ref": {
+            "symbol": "fact_2",
+            "args": [
+              "place_2"
+            ]
+          },
+          "value": false
+        },
+        {
+          "ref": {
+            "symbol": "fact_3",
+            "args": [
+              "player"
+            ]
+          },
+          "value": false
+        },
+        {
+          "ref": {
+            "symbol": "fact_4",
+            "args": [
+              "player"
+            ]
+          },
+          "value": false
+        },
+        {
+          "ref": {
+            "symbol": "fact_5",
+            "args": [
+              "player"
+            ]
+          },
+          "value": false
+        },
+        {
+          "ref": {
+            "symbol": "fact_6",
+            "args": [
+              "player"
+            ]
+          },
+          "value": false
+        }
+      ],
+      "outcomes": [
+        {
+          "endingId": "ending_1",
+          "condition": {
+            "all": [
+              {
+                "ref": {
+                  "symbol": "fact_4",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              },
+              {
+                "ref": {
+                  "symbol": "fact_5",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              },
+              {
+                "ref": {
+                  "symbol": "fact_6",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "endingId": "ending_2",
+          "condition": {
+            "all": [
+              {
+                "ref": {
+                  "symbol": "fact_3",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              },
+              {
+                "ref": {
+                  "symbol": "fact_4",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": false
+              },
+              {
+                "ref": {
+                  "symbol": "fact_5",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "endingId": "ending_3",
+          "condition": {
+            "all": [
+              {
+                "ref": {
+                  "symbol": "fact_5",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "plan": {
+      "format": "stateful-storylines-v2",
+      "title": "비극의 해안 기차역",
+      "beats": [
+        {
+          "key": "beat_base_1",
+          "title": "기차역 도착",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_base_2",
+          "title": "서윤과의 만남",
+          "precondition": {
+            "all": []
+          },
+          "effects": [
+            {
+              "ref": {
+                "symbol": "fact_1",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "set",
+              "value": true
+            }
+          ]
+        },
+        {
+          "key": "beat_base_3",
+          "title": "은색 열쇠 수령",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_base_4",
+          "title": "서윤을 압박하다",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_base_5",
+          "title": "서윤의 고백과 용서",
+          "precondition": {
+            "all": []
+          },
+          "effects": [
+            {
+              "ref": {
+                "symbol": "fact_4",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "set",
+              "value": true
+            },
+            {
+              "ref": {
+                "symbol": "fact_5",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "set",
+              "value": true
+            },
+            {
+              "ref": {
+                "symbol": "fact_6",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "set",
+              "value": true
+            }
+          ]
+        },
+        {
+          "key": "beat_alt_1_1",
+          "title": "서윤의 만류를 무시하다",
+          "precondition": {
+            "all": [
+              {
+                "ref": {
+                  "symbol": "fact_1",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_alt_1_2",
+          "title": "기록실 침입",
+          "precondition": {
+            "all": [
+              {
+                "ref": {
+                  "symbol": "fact_1",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "effects": [
+            {
+              "ref": {
+                "symbol": "fact_2",
+                "args": [
+                  "place_2"
+                ]
+              },
+              "op": "set",
+              "value": true
+            }
+          ]
+        },
+        {
+          "key": "beat_alt_1_3",
+          "title": "원본 기록 확인",
+          "precondition": {
+            "all": []
+          },
+          "effects": [
+            {
+              "ref": {
+                "symbol": "fact_3",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "set",
+              "value": true
+            },
+            {
+              "ref": {
+                "symbol": "fact_5",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "set",
+              "value": true
+            }
+          ]
+        },
+        {
+          "key": "beat_alt_1_4",
+          "title": "진실의 확인",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_alt_1_5",
+          "title": "차가운 결말",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_alt_2_1",
+          "title": "서윤의 안내를 따르다",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_alt_2_2",
+          "title": "폐쇄 승강장 도착",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_alt_2_3",
+          "title": "추억의 공유",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_alt_2_4",
+          "title": "기록실 입성",
+          "precondition": {
+            "all": [
+              {
+                "ref": {
+                  "symbol": "fact_1",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "effects": [
+            {
+              "ref": {
+                "symbol": "fact_2",
+                "args": [
+                  "place_2"
+                ]
+              },
+              "op": "set",
+              "value": true
+            }
+          ]
+        },
+        {
+          "key": "beat_alt_2_5",
+          "title": "허망한 퇴장",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        },
+        {
+          "key": "beat_alt_3_1",
+          "title": "기록실 문 개방",
+          "precondition": {
+            "all": [
+              {
+                "ref": {
+                  "symbol": "fact_1",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "effects": [
+            {
+              "ref": {
+                "symbol": "fact_2",
+                "args": [
+                  "place_2"
+                ]
+              },
+              "op": "set",
+              "value": true
+            }
+          ]
+        },
+        {
+          "key": "beat_alt_4_1",
+          "title": "서윤의 굴복과 열쇠 획득",
+          "precondition": {
+            "all": []
+          },
+          "effects": [
+            {
+              "ref": {
+                "symbol": "fact_1",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "set",
+              "value": true
+            }
+          ]
+        },
+        {
+          "key": "beat_alt_5_1",
+          "title": "기록실 문 개방",
+          "precondition": {
+            "all": [
+              {
+                "ref": {
+                  "symbol": "fact_1",
+                  "args": [
+                    "player"
+                  ]
+                },
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "effects": [
+            {
+              "ref": {
+                "symbol": "fact_2",
+                "args": [
+                  "place_2"
+                ]
+              },
+              "op": "set",
+              "value": true
+            }
+          ]
+        },
+        {
+          "key": "beat_alt_5_2",
+          "title": "시설 안내 확인",
+          "precondition": {
+            "all": []
+          },
+          "effects": []
+        }
+      ],
+      "storylines": [
+        {
+          "endingId": "ending_1",
+          "steps": [
+            {
+              "beatKey": "beat_base_1"
+            },
+            {
+              "beatKey": "beat_base_2"
+            },
+            {
+              "beatKey": "beat_base_3"
+            },
+            {
+              "beatKey": "beat_base_4"
+            },
+            {
+              "beatKey": "beat_base_5"
+            }
+          ]
+        },
+        {
+          "endingId": "ending_2",
+          "steps": [
+            {
+              "beatKey": "beat_base_1"
+            },
+            {
+              "beatKey": "beat_base_2"
+            },
+            {
+              "beatKey": "beat_base_3"
+            },
+            {
+              "beatKey": "beat_alt_1_1"
+            },
+            {
+              "beatKey": "beat_alt_1_2"
+            },
+            {
+              "beatKey": "beat_alt_1_3"
+            },
+            {
+              "beatKey": "beat_alt_1_4"
+            },
+            {
+              "beatKey": "beat_alt_1_5"
+            }
+          ]
+        },
+        {
+          "endingId": "ending_3",
+          "steps": [
+            {
+              "beatKey": "beat_base_1"
+            },
+            {
+              "beatKey": "beat_base_2"
+            },
+            {
+              "beatKey": "beat_base_3"
+            },
+            {
+              "beatKey": "beat_alt_2_1"
+            },
+            {
+              "beatKey": "beat_alt_2_2"
+            },
+            {
+              "beatKey": "beat_alt_2_3"
+            },
+            {
+              "beatKey": "beat_alt_2_4"
+            },
+            {
+              "beatKey": "beat_alt_2_5"
+            }
+          ]
+        },
+        {
+          "endingId": "ending_2",
+          "steps": [
+            {
+              "beatKey": "beat_base_1"
+            },
+            {
+              "beatKey": "beat_base_2"
+            },
+            {
+              "beatKey": "beat_base_3"
+            },
+            {
+              "beatKey": "beat_alt_1_1"
+            },
+            {
+              "beatKey": "beat_alt_3_1"
+            },
+            {
+              "beatKey": "beat_alt_1_3"
+            },
+            {
+              "beatKey": "beat_alt_1_4"
+            },
+            {
+              "beatKey": "beat_alt_1_5"
+            }
+          ]
+        },
+        {
+          "endingId": "ending_1",
+          "steps": [
+            {
+              "beatKey": "beat_base_1"
+            },
+            {
+              "beatKey": "beat_alt_4_1"
+            },
+            {
+              "beatKey": "beat_base_3"
+            },
+            {
+              "beatKey": "beat_base_4"
+            },
+            {
+              "beatKey": "beat_base_5"
+            }
+          ]
+        },
+        {
+          "endingId": "ending_3",
+          "steps": [
+            {
+              "beatKey": "beat_base_1"
+            },
+            {
+              "beatKey": "beat_base_2"
+            },
+            {
+              "beatKey": "beat_base_3"
+            },
+            {
+              "beatKey": "beat_alt_2_1"
+            },
+            {
+              "beatKey": "beat_alt_2_2"
+            },
+            {
+              "beatKey": "beat_alt_2_3"
+            },
+            {
+              "beatKey": "beat_alt_5_1"
+            },
+            {
+              "beatKey": "beat_alt_5_2"
+            },
+            {
+              "beatKey": "beat_alt_2_5"
+            }
+          ]
+        }
+      ]
+    },
+    "skeleton": {
+      "title": "비극의 해안 기차역",
+      "scenes": [
+        {
+          "key": "start",
+          "title": "시작"
+        },
+        {
+          "key": "beat_base_1",
+          "title": "기차역 도착"
+        },
+        {
+          "key": "beat_base_2",
+          "title": "서윤과의 만남"
+        },
+        {
+          "key": "beat_base_3",
+          "title": "은색 열쇠 수령"
+        },
+        {
+          "key": "beat_base_4",
+          "title": "서윤을 압박하다"
+        },
+        {
+          "key": "beat_base_5",
+          "title": "서윤의 고백과 용서"
+        },
+        {
+          "key": "beat_alt_1_1",
+          "title": "서윤의 만류를 무시하다"
+        },
+        {
+          "key": "beat_alt_1_2",
+          "title": "기록실 침입"
+        },
+        {
+          "key": "beat_alt_1_3",
+          "title": "원본 기록 확인"
+        },
+        {
+          "key": "beat_alt_1_4",
+          "title": "진실의 확인"
+        },
+        {
+          "key": "beat_alt_1_5",
+          "title": "차가운 결말"
+        },
+        {
+          "key": "beat_alt_2_1",
+          "title": "서윤의 안내를 따르다"
+        },
+        {
+          "key": "beat_alt_2_2",
+          "title": "폐쇄 승강장 도착"
+        },
+        {
+          "key": "beat_alt_2_3",
+          "title": "추억의 공유"
+        },
+        {
+          "key": "beat_alt_2_4",
+          "title": "기록실 입성"
+        },
+        {
+          "key": "beat_alt_2_5",
+          "title": "허망한 퇴장"
+        },
+        {
+          "key": "beat_alt_3_1",
+          "title": "기록실 문 개방"
+        },
+        {
+          "key": "beat_alt_4_1",
+          "title": "서윤의 굴복과 열쇠 획득"
+        },
+        {
+          "key": "beat_alt_5_1",
+          "title": "기록실 문 개방"
+        },
+        {
+          "key": "beat_alt_5_2",
+          "title": "시설 안내 확인"
+        },
+        {
+          "key": "end_ending_1",
+          "title": "서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다.",
+          "endingId": "ending_1"
+        },
+        {
+          "key": "end_ending_2",
+          "title": "서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다.",
+          "endingId": "ending_2"
+        },
+        {
+          "key": "end_ending_3",
+          "title": "진실을 알아내지 못한다.",
+          "endingId": "ending_3"
+        }
+      ],
+      "links": [
+        {
+          "from": "start",
+          "to": "beat_base_1",
+          "label": "기차역 도착"
+        },
+        {
+          "from": "beat_base_1",
+          "to": "beat_base_2",
+          "label": "서윤과의 만남"
+        },
+        {
+          "from": "beat_base_2",
+          "to": "beat_base_3",
+          "label": "은색 열쇠 수령"
+        },
+        {
+          "from": "beat_base_3",
+          "to": "beat_base_4",
+          "label": "서윤을 압박하다"
+        },
+        {
+          "from": "beat_base_4",
+          "to": "beat_base_5",
+          "label": "서윤의 고백과 용서"
+        },
+        {
+          "from": "beat_base_5",
+          "to": "end_ending_1",
+          "label": "서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다."
+        },
+        {
+          "from": "beat_base_3",
+          "to": "beat_alt_1_1",
+          "label": "서윤의 만류를 무시하다"
+        },
+        {
+          "from": "beat_alt_1_1",
+          "to": "beat_alt_1_2",
+          "label": "기록실 침입"
+        },
+        {
+          "from": "beat_alt_1_2",
+          "to": "beat_alt_1_3",
+          "label": "원본 기록 확인"
+        },
+        {
+          "from": "beat_alt_1_3",
+          "to": "beat_alt_1_4",
+          "label": "진실의 확인"
+        },
+        {
+          "from": "beat_alt_1_4",
+          "to": "beat_alt_1_5",
+          "label": "차가운 결말"
+        },
+        {
+          "from": "beat_alt_1_5",
+          "to": "end_ending_2",
+          "label": "서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다."
+        },
+        {
+          "from": "beat_base_3",
+          "to": "beat_alt_2_1",
+          "label": "서윤의 안내를 따르다"
+        },
+        {
+          "from": "beat_alt_2_1",
+          "to": "beat_alt_2_2",
+          "label": "폐쇄 승강장 도착"
+        },
+        {
+          "from": "beat_alt_2_2",
+          "to": "beat_alt_2_3",
+          "label": "추억의 공유"
+        },
+        {
+          "from": "beat_alt_2_3",
+          "to": "beat_alt_2_4",
+          "label": "기록실 입성"
+        },
+        {
+          "from": "beat_alt_2_4",
+          "to": "beat_alt_2_5",
+          "label": "허망한 퇴장"
+        },
+        {
+          "from": "beat_alt_2_5",
+          "to": "end_ending_3",
+          "label": "진실을 알아내지 못한다."
+        },
+        {
+          "from": "beat_alt_1_1",
+          "to": "beat_alt_3_1",
+          "label": "기록실 문 개방"
+        },
+        {
+          "from": "beat_alt_3_1",
+          "to": "beat_alt_1_3",
+          "label": "원본 기록 확인"
+        },
+        {
+          "from": "beat_base_1",
+          "to": "beat_alt_4_1",
+          "label": "서윤의 굴복과 열쇠 획득"
+        },
+        {
+          "from": "beat_alt_4_1",
+          "to": "beat_base_3",
+          "label": "은색 열쇠 수령"
+        },
+        {
+          "from": "beat_alt_2_3",
+          "to": "beat_alt_5_1",
+          "label": "기록실 문 개방"
+        },
+        {
+          "from": "beat_alt_5_1",
+          "to": "beat_alt_5_2",
+          "label": "시설 안내 확인"
+        },
+        {
+          "from": "beat_alt_5_2",
+          "to": "beat_alt_2_5",
+          "label": "허망한 퇴장"
+        }
+      ]
+    },
+    "details": {
+      "format": "stateful-v1",
+      "scenes": {
+        "start": {
+          "summary": "이야기를 시작합니다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_base_1",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_base_1": {
+          "summary": "비 오는 밤, 폐쇄 직전의 해안 기차역에서 플레이어는 실종된 언니를 찾기 위해 역무원 서윤을 만난다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_base_2",
+              "precondition": {
+                "all": []
+              },
+              "effects": [
+                {
+                  "ref": {
+                    "symbol": "fact_1",
+                    "args": [
+                      "player"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                }
+              ]
+            },
+            {
+              "to": "beat_alt_4_1",
+              "precondition": {
+                "all": []
+              },
+              "effects": [
+                {
+                  "ref": {
+                    "symbol": "fact_1",
+                    "args": [
+                      "player"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        "beat_base_2": {
+          "summary": "플레이어는 폭우가 쏟아지는 해안 기차역에서 역무원 서윤을 만나 실종된 언니에 대해 묻는다. 서윤은 슬픈 표정을 지으며 협조적인 태도로 플레이어에게 은색 열쇠를 건네준다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_base_3",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_base_3": {
+          "summary": "플레이어는 서윤이 건넨 은색 열쇠를 챙기고, 그녀가 안내하는 대로 폐쇄 승강장 근처로 이동한다. 서윤은 플레이어가 기록실 깊숙한 곳을 보지 못하도록 시선을 피하며 계속해서 앞장선다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_base_4",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            },
+            {
+              "to": "beat_alt_1_1",
+              "precondition": {
+                "all": [
+                  {
+                    "ref": {
+                      "symbol": "fact_1",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  }
+                ]
+              },
+              "effects": []
+            },
+            {
+              "to": "beat_alt_2_1",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_base_4": {
+          "summary": "플레이어는 서윤의 미세한 떨림과 모순된 행동을 포착하고, 그녀의 시선을 정면으로 마주하며 과거 사고 당시의 구체적인 상황을 묻는다. 서윤은 당황하며 말을 더듬고 눈시울이 붉어진다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_base_5",
+              "precondition": {
+                "all": []
+              },
+              "effects": [
+                {
+                  "ref": {
+                    "symbol": "fact_4",
+                    "args": [
+                      "player"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                },
+                {
+                  "ref": {
+                    "symbol": "fact_5",
+                    "args": [
+                      "player"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                },
+                {
+                  "ref": {
+                    "symbol": "fact_6",
+                    "args": [
+                      "player"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        "beat_base_5": {
+          "summary": "서윤은 결국 무너져 내려, 자신의 업무상 과실로 인해 언니가 폐쇄 승강장에서 추락했다는 사실과 이를 은폐하기 위해 기록을 조작했음을 자백한다. 플레이어는 서윤의 고통을 이해하고 그녀를 용서하며 비극적인 진실을 받아들인다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "end_ending_1",
+              "precondition": {
+                "all": [
+                  {
+                    "ref": {
+                      "symbol": "fact_4",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  },
+                  {
+                    "ref": {
+                      "symbol": "fact_5",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  },
+                  {
+                    "ref": {
+                      "symbol": "fact_6",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  }
+                ]
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_1_1": {
+          "summary": "서윤이 기록실 근처에서 멈춰 서서 다른 방향을 가리키며 플레이어를 만류하지만, 플레이어는 그녀의 시선을 피하며 은색 열쇠를 꺼내 든다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_1_2",
+              "precondition": {
+                "all": [
+                  {
+                    "ref": {
+                      "symbol": "fact_1",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  }
+                ]
+              },
+              "effects": [
+                {
+                  "ref": {
+                    "symbol": "fact_2",
+                    "args": [
+                      "place_2"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                }
+              ]
+            },
+            {
+              "to": "beat_alt_3_1",
+              "precondition": {
+                "all": [
+                  {
+                    "ref": {
+                      "symbol": "fact_1",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  }
+                ]
+              },
+              "effects": [
+                {
+                  "ref": {
+                    "symbol": "fact_2",
+                    "args": [
+                      "place_2"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        "beat_alt_1_2": {
+          "summary": "플레이어는 서윤이 금지한 기록실의 깊숙한 구역으로 단독으로 들어간다. 은색 열쇠를 사용해 육중한 철문을 열고 내부로 진입한다.",
+          "locationId": "place_2",
+          "presentCharacters": [
+            "player"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_1_3",
+              "precondition": {
+                "all": []
+              },
+              "effects": [
+                {
+                  "ref": {
+                    "symbol": "fact_3",
+                    "args": [
+                      "player"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                },
+                {
+                  "ref": {
+                    "symbol": "fact_5",
+                    "args": [
+                      "player"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        "beat_alt_1_3": {
+          "summary": "플레이어는 먼지가 쌓인 서류 더미 속에서 언니의 이름이 적힌 사고 보고서를 발견한다. 서윤의 과실로 인한 추락 사고와 이후의 기록 조작 사실을 확인한다.",
+          "locationId": "place_2",
+          "presentCharacters": [
+            "player"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_1_4",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_1_4": {
+          "summary": "플레이어는 서윤이 은폐하려 했던 진실을 완전히 파악한다. 언니는 사고로 사망했으며, 서윤은 자신의 잘못을 덮기 위해 모든 증거를 조작했음을 알게 된다.",
+          "locationId": "place_2",
+          "presentCharacters": [
+            "player"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_1_5",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_1_5": {
+          "summary": "기록실을 나온 플레이어는 서윤과 마주치지만 아무런 말도 건네지 않는다. 서윤은 플레이어의 차가운 시선을 느끼며 죄책감과 불신이 섞인 공포를 느끼고, 플레이어는 허망함 속에 역을 떠난다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "end_ending_2",
+              "precondition": {
+                "all": [
+                  {
+                    "ref": {
+                      "symbol": "fact_3",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  },
+                  {
+                    "ref": {
+                      "symbol": "fact_4",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": false
+                  },
+                  {
+                    "ref": {
+                      "symbol": "fact_5",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  }
+                ]
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_2_1": {
+          "summary": "플레이어는 서윤의 안내를 신뢰하며 그녀가 가리키는 대로 폐쇄 승강장 쪽을 향해 걷는다. 서윤은 플레이어가 의심하지 않도록 친절하게 말을 건네며 분위기를 주도한다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_2_2",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_2_2": {
+          "summary": "서윤은 폐쇄 승강장의 끝자락에 멈춰 서서 언니의 흔적을 찾을 수 있을지도 모른다고 말한다. 플레이어는 그녀의 말에 의지하며 승강장의 차가운 공기를 마신다.",
+          "locationId": "place_3",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_2_3",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_2_3": {
+          "summary": "서윤은 기록실로 가기 전 잠시 멈춰 서서 플레이어에게 언니에 대한 추억을 이야기한다. 플레이어는 그녀의 이야기에 귀를 기울이며 기록실 내부를 확인하지 않는다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_2_4",
+              "precondition": {
+                "all": [
+                  {
+                    "ref": {
+                      "symbol": "fact_1",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  }
+                ]
+              },
+              "effects": [
+                {
+                  "ref": {
+                    "symbol": "fact_2",
+                    "args": [
+                      "place_2"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                }
+              ]
+            },
+            {
+              "to": "beat_alt_5_1",
+              "precondition": {
+                "all": [
+                  {
+                    "ref": {
+                      "symbol": "fact_1",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": true
+                  }
+                ]
+              },
+              "effects": [
+                {
+                  "ref": {
+                    "symbol": "fact_2",
+                    "args": [
+                      "place_2"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        "beat_alt_2_4": {
+          "summary": "서윤은 은색 열쇠로 기록실 문을 열어주며, 플레이어에게 일반적인 행정 서류들만 훑어보라고 말한다. 플레이어는 서윤의 권고대로 서류 더미의 겉면만 확인한다.",
+          "locationId": "place_2",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_2_5",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_2_5": {
+          "summary": "플레이어는 서윤이 안내한 구역의 서류들만 확인한 채 기록실을 빠져나온다. 언니의 실종에 대한 구체적인 진실은 끝내 밝혀지지 않은 채 역을 떠난다.",
+          "locationId": "place_2",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "end_ending_3",
+              "precondition": {
+                "all": [
+                  {
+                    "ref": {
+                      "symbol": "fact_5",
+                      "args": [
+                        "player"
+                      ]
+                    },
+                    "op": "eq",
+                    "value": false
+                  }
+                ]
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_3_1": {
+          "summary": "플레이어는 서윤이 다른 쪽을 보게 유도하며 은색 열쇠를 이용해 기록실 문을 조용히 연다. 서윤은 문이 열리는 소리에 놀라 뒤로 물러나지만, 플레이어는 문을 활짝 열어둔 채로 기록실 안을 향해 들어선다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_1_3",
+              "precondition": {
+                "all": []
+              },
+              "effects": [
+                {
+                  "ref": {
+                    "symbol": "fact_3",
+                    "args": [
+                      "player"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                },
+                {
+                  "ref": {
+                    "symbol": "fact_5",
+                    "args": [
+                      "player"
+                    ]
+                  },
+                  "op": "set",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        "beat_alt_4_1": {
+          "summary": "플레이어는 서윤의 불안한 눈빛을 뚫어지게 응시하며 언니의 실종에 대한 단서를 집요하게 요구한다. 서윤은 압박감을 견디지 못하고 떨리는 손으로 주머니에서 은색 열쇠를 꺼내 플레이어의 손에 쥐여준다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_base_3",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_5_1": {
+          "summary": "서윤은 먼지가 많으니 조심하라며 주의를 준 뒤 은색 열쇠로 기록실 문을 열어준다.",
+          "locationId": "place_2",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_5_2",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "beat_alt_5_2": {
+          "summary": "플레이어는 서윤의 안내에 따라 서류 더미 대신 벽면의 게시판 공고문과 시설 배치도를 꼼꼼히 살핀다.",
+          "locationId": "place_2",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          },
+          "actions": [
+            {
+              "to": "beat_alt_2_5",
+              "precondition": {
+                "all": []
+              },
+              "effects": []
+            }
+          ]
+        },
+        "end_ending_1": {
+          "summary": "서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          }
+        },
+        "end_ending_2": {
+          "summary": "서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다.",
+          "locationId": "place_1",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          }
+        },
+        "end_ending_3": {
+          "summary": "진실을 알아내지 못한다.",
+          "locationId": "place_2",
+          "presentCharacters": [
+            "player",
+            "person_2"
+          ],
+          "precondition": {
+            "all": []
+          }
+        }
+      }
+    }
+  },
+  "graph": {
+    "startNodeId": "n_start",
+    "nodes": [
+      {
+        "id": "n_start",
+        "title": "시작",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "이야기를 시작합니다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "이야기를 시작합니다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 80
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_base_1",
+        "title": "기차역 도착",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "비 오는 밤, 폐쇄 직전의 해안 기차역에서 플레이어는 실종된 언니를 찾기 위해 역무원 서윤을 만난다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "비 오는 밤, 폐쇄 직전의 해안 기차역에서 플레이어는 실종된 언니를 찾기 위해 역무원 서윤을 만난다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 290
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_base_2",
+        "title": "서윤과의 만남",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "플레이어는 폭우가 쏟아지는 해안 기차역에서 역무원 서윤을 만나 실종된 언니에 대해 묻는다. 서윤은 슬픈 표정을 지으며 협조적인 태도로 플레이어에게 은색 열쇠를 건네준다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 폭우가 쏟아지는 해안 기차역에서 역무원 서윤을 만나 실종된 언니에 대해 묻는다. 서윤은 슬픈 표정을 지으며 협조적인 태도로 플레이어에게 은색 열쇠를 건네준다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 500
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_base_3",
+        "title": "은색 열쇠 수령",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "플레이어는 서윤이 건넨 은색 열쇠를 챙기고, 그녀가 안내하는 대로 폐쇄 승강장 근처로 이동한다. 서윤은 플레이어가 기록실 깊숙한 곳을 보지 못하도록 시선을 피하며 계속해서 앞장선다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 서윤이 건넨 은색 열쇠를 챙기고, 그녀가 안내하는 대로 폐쇄 승강장 근처로 이동한다. 서윤은 플레이어가 기록실 깊숙한 곳을 보지 못하도록 시선을 피하며 계속해서 앞장선다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 710
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_base_4",
+        "title": "서윤을 압박하다",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "플레이어는 서윤의 미세한 떨림과 모순된 행동을 포착하고, 그녀의 시선을 정면으로 마주하며 과거 사고 당시의 구체적인 상황을 묻는다. 서윤은 당황하며 말을 더듬고 눈시울이 붉어진다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 서윤의 미세한 떨림과 모순된 행동을 포착하고, 그녀의 시선을 정면으로 마주하며 과거 사고 당시의 구체적인 상황을 묻는다. 서윤은 당황하며 말을 더듬고 눈시울이 붉어진다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 920
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_base_5",
+        "title": "서윤의 고백과 용서",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "서윤은 결국 무너져 내려, 자신의 업무상 과실로 인해 언니가 폐쇄 승강장에서 추락했다는 사실과 이를 은폐하기 위해 기록을 조작했음을 자백한다. 플레이어는 서윤의 고통을 이해하고 그녀를 용서하며 비극적인 진실을 받아들인다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "서윤은 결국 무너져 내려, 자신의 업무상 과실로 인해 언니가 폐쇄 승강장에서 추락했다는 사실과 이를 은폐하기 위해 기록을 조작했음을 자백한다. 플레이어는 서윤의 고통을 이해하고 그녀를 용서하며 비극적인 진실을 받아들인다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 1130
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_1_1",
+        "title": "서윤의 만류를 무시하다",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "서윤이 기록실 근처에서 멈춰 서서 다른 방향을 가리키며 플레이어를 만류하지만, 플레이어는 그녀의 시선을 피하며 은색 열쇠를 꺼내 든다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "서윤이 기록실 근처에서 멈춰 서서 다른 방향을 가리키며 플레이어를 만류하지만, 플레이어는 그녀의 시선을 피하며 은색 열쇠를 꺼내 든다."
+        },
+        "editor": {
+          "position": {
+            "x": 390,
+            "y": 920
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_1_2",
+        "title": "기록실 침입",
+        "type": "choice",
+        "locationId": "loc_place_2",
+        "presentCharacters": [
+          "chr_player"
+        ],
+        "sceneGoal": "플레이어는 서윤이 금지한 기록실의 깊숙한 구역으로 단독으로 들어간다. 은색 열쇠를 사용해 육중한 철문을 열고 내부로 진입한다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 서윤이 금지한 기록실의 깊숙한 구역으로 단독으로 들어간다. 은색 열쇠를 사용해 육중한 철문을 열고 내부로 진입한다."
+        },
+        "editor": {
+          "position": {
+            "x": 390,
+            "y": 1130
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_1_3",
+        "title": "원본 기록 확인",
+        "type": "choice",
+        "locationId": "loc_place_2",
+        "presentCharacters": [
+          "chr_player"
+        ],
+        "sceneGoal": "플레이어는 먼지가 쌓인 서류 더미 속에서 언니의 이름이 적힌 사고 보고서를 발견한다. 서윤의 과실로 인한 추락 사고와 이후의 기록 조작 사실을 확인한다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 먼지가 쌓인 서류 더미 속에서 언니의 이름이 적힌 사고 보고서를 발견한다. 서윤의 과실로 인한 추락 사고와 이후의 기록 조작 사실을 확인한다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 1340
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_1_4",
+        "title": "진실의 확인",
+        "type": "choice",
+        "locationId": "loc_place_2",
+        "presentCharacters": [
+          "chr_player"
+        ],
+        "sceneGoal": "플레이어는 서윤이 은폐하려 했던 진실을 완전히 파악한다. 언니는 사고로 사망했으며, 서윤은 자신의 잘못을 덮기 위해 모든 증거를 조작했음을 알게 된다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 서윤이 은폐하려 했던 진실을 완전히 파악한다. 언니는 사고로 사망했으며, 서윤은 자신의 잘못을 덮기 위해 모든 증거를 조작했음을 알게 된다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 1550
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_1_5",
+        "title": "차가운 결말",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "기록실을 나온 플레이어는 서윤과 마주치지만 아무런 말도 건네지 않는다. 서윤은 플레이어의 차가운 시선을 느끼며 죄책감과 불신이 섞인 공포를 느끼고, 플레이어는 허망함 속에 역을 떠난다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "기록실을 나온 플레이어는 서윤과 마주치지만 아무런 말도 건네지 않는다. 서윤은 플레이어의 차가운 시선을 느끼며 죄책감과 불신이 섞인 공포를 느끼고, 플레이어는 허망함 속에 역을 떠난다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 1760
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_2_1",
+        "title": "서윤의 안내를 따르다",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "플레이어는 서윤의 안내를 신뢰하며 그녀가 가리키는 대로 폐쇄 승강장 쪽을 향해 걷는다. 서윤은 플레이어가 의심하지 않도록 친절하게 말을 건네며 분위기를 주도한다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 서윤의 안내를 신뢰하며 그녀가 가리키는 대로 폐쇄 승강장 쪽을 향해 걷는다. 서윤은 플레이어가 의심하지 않도록 친절하게 말을 건네며 분위기를 주도한다."
+        },
+        "editor": {
+          "position": {
+            "x": 700,
+            "y": 920
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_2_2",
+        "title": "폐쇄 승강장 도착",
+        "type": "choice",
+        "locationId": "loc_place_3",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "서윤은 폐쇄 승강장의 끝자락에 멈춰 서서 언니의 흔적을 찾을 수 있을지도 모른다고 말한다. 플레이어는 그녀의 말에 의지하며 승강장의 차가운 공기를 마신다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "서윤은 폐쇄 승강장의 끝자락에 멈춰 서서 언니의 흔적을 찾을 수 있을지도 모른다고 말한다. 플레이어는 그녀의 말에 의지하며 승강장의 차가운 공기를 마신다."
+        },
+        "editor": {
+          "position": {
+            "x": 700,
+            "y": 1130
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_2_3",
+        "title": "추억의 공유",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "서윤은 기록실로 가기 전 잠시 멈춰 서서 플레이어에게 언니에 대한 추억을 이야기한다. 플레이어는 그녀의 이야기에 귀를 기울이며 기록실 내부를 확인하지 않는다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "서윤은 기록실로 가기 전 잠시 멈춰 서서 플레이어에게 언니에 대한 추억을 이야기한다. 플레이어는 그녀의 이야기에 귀를 기울이며 기록실 내부를 확인하지 않는다."
+        },
+        "editor": {
+          "position": {
+            "x": 390,
+            "y": 1340
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_2_4",
+        "title": "기록실 입성",
+        "type": "choice",
+        "locationId": "loc_place_2",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "서윤은 은색 열쇠로 기록실 문을 열어주며, 플레이어에게 일반적인 행정 서류들만 훑어보라고 말한다. 플레이어는 서윤의 권고대로 서류 더미의 겉면만 확인한다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "서윤은 은색 열쇠로 기록실 문을 열어주며, 플레이어에게 일반적인 행정 서류들만 훑어보라고 말한다. 플레이어는 서윤의 권고대로 서류 더미의 겉면만 확인한다."
+        },
+        "editor": {
+          "position": {
+            "x": 390,
+            "y": 1550
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_2_5",
+        "title": "허망한 퇴장",
+        "type": "choice",
+        "locationId": "loc_place_2",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "플레이어는 서윤이 안내한 구역의 서류들만 확인한 채 기록실을 빠져나온다. 언니의 실종에 대한 구체적인 진실은 끝내 밝혀지지 않은 채 역을 떠난다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 서윤이 안내한 구역의 서류들만 확인한 채 기록실을 빠져나온다. 언니의 실종에 대한 구체적인 진실은 끝내 밝혀지지 않은 채 역을 떠난다."
+        },
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 1970
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_3_1",
+        "title": "기록실 문 개방",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "플레이어는 서윤이 다른 쪽을 보게 유도하며 은색 열쇠를 이용해 기록실 문을 조용히 연다. 서윤은 문이 열리는 소리에 놀라 뒤로 물러나지만, 플레이어는 문을 활짝 열어둔 채로 기록실 안을 향해 들어선다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 서윤이 다른 쪽을 보게 유도하며 은색 열쇠를 이용해 기록실 문을 조용히 연다. 서윤은 문이 열리는 소리에 놀라 뒤로 물러나지만, 플레이어는 문을 활짝 열어둔 채로 기록실 안을 향해 들어선다."
+        },
+        "editor": {
+          "position": {
+            "x": 1010,
+            "y": 1130
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_4_1",
+        "title": "서윤의 굴복과 열쇠 획득",
+        "type": "choice",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "플레이어는 서윤의 불안한 눈빛을 뚫어지게 응시하며 언니의 실종에 대한 단서를 집요하게 요구한다. 서윤은 압박감을 견디지 못하고 떨리는 손으로 주머니에서 은색 열쇠를 꺼내 플레이어의 손에 쥐여준다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 서윤의 불안한 눈빛을 뚫어지게 응시하며 언니의 실종에 대한 단서를 집요하게 요구한다. 서윤은 압박감을 견디지 못하고 떨리는 손으로 주머니에서 은색 열쇠를 꺼내 플레이어의 손에 쥐여준다."
+        },
+        "editor": {
+          "position": {
+            "x": 390,
+            "y": 500
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_5_1",
+        "title": "기록실 문 개방",
+        "type": "choice",
+        "locationId": "loc_place_2",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "서윤은 먼지가 많으니 조심하라며 주의를 준 뒤 은색 열쇠로 기록실 문을 열어준다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "서윤은 먼지가 많으니 조심하라며 주의를 준 뒤 은색 열쇠로 기록실 문을 열어준다."
+        },
+        "editor": {
+          "position": {
+            "x": 700,
+            "y": 1550
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_beat_alt_5_2",
+        "title": "시설 안내 확인",
+        "type": "choice",
+        "locationId": "loc_place_2",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "플레이어는 서윤의 안내에 따라 서류 더미 대신 벽면의 게시판 공고문과 시설 배치도를 꼼꼼히 살핀다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "choicePrompt": {
+          "content": "플레이어는 서윤의 안내에 따라 서류 더미 대신 벽면의 게시판 공고문과 시설 배치도를 꼼꼼히 살핀다."
+        },
+        "editor": {
+          "position": {
+            "x": 390,
+            "y": 1760
+          },
+          "color": "#ffd166"
+        }
+      },
+      {
+        "id": "n_end_ending_1",
+        "title": "서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다.",
+        "type": "end",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "endingSummary": "서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다.",
+        "endingKind": "success",
+        "outcomeTags": [
+          "ending_1"
+        ],
+        "editor": {
+          "position": {
+            "x": 700,
+            "y": 1340
+          },
+          "color": "#7bdcb5"
+        }
+      },
+      {
+        "id": "n_end_ending_2",
+        "title": "서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다.",
+        "type": "end",
+        "locationId": "loc_place_1",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "endingSummary": "서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다.",
+        "endingKind": "neutral",
+        "outcomeTags": [
+          "ending_2"
+        ],
+        "editor": {
+          "position": {
+            "x": 390,
+            "y": 1970
+          },
+          "color": "#7bdcb5"
+        }
+      },
+      {
+        "id": "n_end_ending_3",
+        "title": "진실을 알아내지 못한다.",
+        "type": "end",
+        "locationId": "loc_place_2",
+        "presentCharacters": [
+          "chr_player",
+          "chr_person_2"
+        ],
+        "sceneGoal": "진실을 알아내지 못한다.",
+        "directorNotes": "",
+        "dialogueMode": "scripted",
+        "playerInputMode": "reply-options",
+        "scriptedLines": [],
+        "endingSummary": "진실을 알아내지 못한다.",
+        "endingKind": "failure",
+        "outcomeTags": [
+          "ending_3"
+        ],
+        "editor": {
+          "position": {
+            "x": 80,
+            "y": 2180
+          },
+          "color": "#7bdcb5"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e_start_1",
+        "from": "n_start",
+        "to": "n_beat_base_1",
+        "choiceLabel": "기차역 도착"
+      },
+      {
+        "id": "e_beat_base_1_1",
+        "from": "n_beat_base_1",
+        "to": "n_beat_base_2",
+        "choiceLabel": "서윤과의 만남"
+      },
+      {
+        "id": "e_beat_base_2_1",
+        "from": "n_beat_base_2",
+        "to": "n_beat_base_3",
+        "choiceLabel": "은색 열쇠 수령"
+      },
+      {
+        "id": "e_beat_base_3_1",
+        "from": "n_beat_base_3",
+        "to": "n_beat_base_4",
+        "choiceLabel": "서윤을 압박하다"
+      },
+      {
+        "id": "e_beat_base_4_1",
+        "from": "n_beat_base_4",
+        "to": "n_beat_base_5",
+        "choiceLabel": "서윤의 고백과 용서"
+      },
+      {
+        "id": "e_beat_base_5_1",
+        "from": "n_beat_base_5",
+        "to": "n_end_ending_1",
+        "choiceLabel": "서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다."
+      },
+      {
+        "id": "e_beat_base_3_2",
+        "from": "n_beat_base_3",
+        "to": "n_beat_alt_1_1",
+        "choiceLabel": "서윤의 만류를 무시하다"
+      },
+      {
+        "id": "e_beat_alt_1_1_1",
+        "from": "n_beat_alt_1_1",
+        "to": "n_beat_alt_1_2",
+        "choiceLabel": "기록실 침입"
+      },
+      {
+        "id": "e_beat_alt_1_2_1",
+        "from": "n_beat_alt_1_2",
+        "to": "n_beat_alt_1_3",
+        "choiceLabel": "원본 기록 확인"
+      },
+      {
+        "id": "e_beat_alt_1_3_1",
+        "from": "n_beat_alt_1_3",
+        "to": "n_beat_alt_1_4",
+        "choiceLabel": "진실의 확인"
+      },
+      {
+        "id": "e_beat_alt_1_4_1",
+        "from": "n_beat_alt_1_4",
+        "to": "n_beat_alt_1_5",
+        "choiceLabel": "차가운 결말"
+      },
+      {
+        "id": "e_beat_alt_1_5_1",
+        "from": "n_beat_alt_1_5",
+        "to": "n_end_ending_2",
+        "choiceLabel": "서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다."
+      },
+      {
+        "id": "e_beat_base_3_3",
+        "from": "n_beat_base_3",
+        "to": "n_beat_alt_2_1",
+        "choiceLabel": "서윤의 안내를 따르다"
+      },
+      {
+        "id": "e_beat_alt_2_1_1",
+        "from": "n_beat_alt_2_1",
+        "to": "n_beat_alt_2_2",
+        "choiceLabel": "폐쇄 승강장 도착"
+      },
+      {
+        "id": "e_beat_alt_2_2_1",
+        "from": "n_beat_alt_2_2",
+        "to": "n_beat_alt_2_3",
+        "choiceLabel": "추억의 공유"
+      },
+      {
+        "id": "e_beat_alt_2_3_1",
+        "from": "n_beat_alt_2_3",
+        "to": "n_beat_alt_2_4",
+        "choiceLabel": "기록실 입성"
+      },
+      {
+        "id": "e_beat_alt_2_4_1",
+        "from": "n_beat_alt_2_4",
+        "to": "n_beat_alt_2_5",
+        "choiceLabel": "허망한 퇴장"
+      },
+      {
+        "id": "e_beat_alt_2_5_1",
+        "from": "n_beat_alt_2_5",
+        "to": "n_end_ending_3",
+        "choiceLabel": "진실을 알아내지 못한다."
+      },
+      {
+        "id": "e_beat_alt_1_1_2",
+        "from": "n_beat_alt_1_1",
+        "to": "n_beat_alt_3_1",
+        "choiceLabel": "기록실 문 개방"
+      },
+      {
+        "id": "e_beat_alt_3_1_1",
+        "from": "n_beat_alt_3_1",
+        "to": "n_beat_alt_1_3",
+        "choiceLabel": "원본 기록 확인"
+      },
+      {
+        "id": "e_beat_base_1_2",
+        "from": "n_beat_base_1",
+        "to": "n_beat_alt_4_1",
+        "choiceLabel": "서윤의 굴복과 열쇠 획득"
+      },
+      {
+        "id": "e_beat_alt_4_1_1",
+        "from": "n_beat_alt_4_1",
+        "to": "n_beat_base_3",
+        "choiceLabel": "은색 열쇠 수령"
+      },
+      {
+        "id": "e_beat_alt_2_3_2",
+        "from": "n_beat_alt_2_3",
+        "to": "n_beat_alt_5_1",
+        "choiceLabel": "기록실 문 개방"
+      },
+      {
+        "id": "e_beat_alt_5_1_1",
+        "from": "n_beat_alt_5_1",
+        "to": "n_beat_alt_5_2",
+        "choiceLabel": "시설 안내 확인"
+      },
+      {
+        "id": "e_beat_alt_5_2_1",
+        "from": "n_beat_alt_5_2",
+        "to": "n_beat_alt_2_5",
+        "choiceLabel": "허망한 퇴장"
+      }
+    ]
+  },
+  "chapter": {
+    "brief": "비 오는 밤, 폐쇄 직전의 해안 기차역에서 사라진 언니의 행방을 찾는 이야기.\n플레이어와 야간 역무원 서윤이 등장한다.\n은색 열쇠, 기록실, 폐쇄 승강장이 중요하다.\n언니 실종의 진실을 서윤이 알고 있지만 본인의 잘못이 엮여 있어 이를 숨기고 있다.\n\n결말:\n- 서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다.\n- 서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다.\n- 진실을 알아내지 못한다.\n\n분위기는 조용하고 불안한 현대 판타지 미스터리.\n\n자동 보완한 작가용 배경 설정 (플레이어가 이미 아는 사실이 아님):\n언니는 사실 서윤이 과거에 저지른 치명적인 업무상 과실로 인해 폐쇄 승강장에서 추락 사고를 당했으며, 서윤은 이를 은폐하기 위해 기록실의 관련 문서를 조작했다. 서윤은 언니를 그리워하면서도 자신의 사회적 파멸을 막기 위해 진실을 숨기려 하며, 플레이어에게는 협조적인 태도를 취하면서도 결정적인 증거가 담긴 기록은 교묘히 회피한다. 서윤은 플레이어와 완전히 단절할 경우 언니의 유품이나 행방에 대한 단서를 영영 잃게 되므로, 플레이어에게 최소한의 정보와 은색 열쇠의 위치를 제공하는 대가로 플레이어가 기록실의 핵심 구역에 접근하지 못하도록 유도한다.",
+    "sourceBrief": "비 오는 밤, 폐쇄 직전의 해안 기차역에서 사라진 언니의 행방을 찾는 이야기.\n플레이어와 야간 역무원 서윤이 등장한다.\n은색 열쇠, 기록실, 폐쇄 승강장이 중요하다.\n언니 실종의 진실을 서윤이 알고 있지만 본인의 잘못이 엮여 있어 이를 숨기고 있다.\n\n결말:\n- 서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다.\n- 서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다.\n- 진실을 알아내지 못한다.\n\n분위기는 조용하고 불안한 현대 판타지 미스터리.",
+    "creativeContext": "언니는 사실 서윤이 과거에 저지른 치명적인 업무상 과실로 인해 폐쇄 승강장에서 추락 사고를 당했으며, 서윤은 이를 은폐하기 위해 기록실의 관련 문서를 조작했다. 서윤은 언니를 그리워하면서도 자신의 사회적 파멸을 막기 위해 진실을 숨기려 하며, 플레이어에게는 협조적인 태도를 취하면서도 결정적인 증거가 담긴 기록은 교묘히 회피한다. 서윤은 플레이어와 완전히 단절할 경우 언니의 유품이나 행방에 대한 단서를 영영 잃게 되므로, 플레이어에게 최소한의 정보와 은색 열쇠의 위치를 제공하는 대가로 플레이어가 기록실의 핵심 구역에 접근하지 못하도록 유도한다.",
+    "contract": {
+      "entityLabels": [
+        {
+          "id": "player",
+          "label": "플레이어"
+        },
+        {
+          "id": "person_2",
+          "label": "서윤"
+        },
+        {
+          "id": "item_1",
+          "label": "은색 열쇠"
+        },
+        {
+          "id": "place_1",
+          "label": "해안 기차역"
+        },
+        {
+          "id": "place_2",
+          "label": "기록실"
+        },
+        {
+          "id": "place_3",
+          "label": "폐쇄 승강장"
+        }
+      ],
+      "entities": {
+        "characters": [
+          "player",
+          "person_2"
+        ],
+        "items": [
+          "item_1"
+        ],
+        "locations": [
+          "place_1",
+          "place_2",
+          "place_3"
+        ]
+      },
+      "stateSymbols": [
+        {
+          "id": "fact_1",
+          "meaning": "플레이어가 은색 열쇠를 가지고 있다.",
+          "type": "boolean",
+          "parameterCount": 1
+        },
+        {
+          "id": "fact_2",
+          "meaning": "기록실의 문이 열려 있다.",
+          "type": "boolean",
+          "parameterCount": 1
+        },
+        {
+          "id": "fact_3",
+          "meaning": "플레이어가 기록실의 원본 기록을 읽어 언니 실종의 실제 경위를 확인했다.",
+          "type": "boolean",
+          "parameterCount": 1
+        },
+        {
+          "id": "fact_4",
+          "meaning": "플레이어가 서윤에게 언니 실종의 실제 경위를 직접 들었다.",
+          "type": "boolean",
+          "parameterCount": 1
+        },
+        {
+          "id": "fact_5",
+          "meaning": "플레이어가 언니 실종의 실제 경위를 알았다.",
+          "type": "boolean",
+          "parameterCount": 1
+        },
+        {
+          "id": "fact_6",
+          "meaning": "플레이어가 서윤을 용서했다.",
+          "type": "boolean",
+          "parameterCount": 1
+        }
+      ],
+      "relationshipSymbols": [],
+      "endings": [
+        {
+          "id": "ending_1",
+          "label": "서윤의 고백으로 본인의 잘못과 언니 실종의 진실을 알게 되고, 서윤을 용서한다."
+        },
+        {
+          "id": "ending_2",
+          "label": "서윤에게서 진실을 알아내지 못했지만 기록실에서 진실을 알아낸다."
+        },
+        {
+          "id": "ending_3",
+          "label": "진실을 알아내지 못한다."
+        }
+      ]
+    },
+    "playerId": "player",
+    "revision": "f04ef20f-0c59-49b4-bdc4-5a022f9b9e0d",
+    "initialState": [
+      {
+        "ref": {
+          "symbol": "fact_1",
+          "args": [
+            "player"
+          ]
+        },
+        "value": false
+      },
+      {
+        "ref": {
+          "symbol": "fact_2",
+          "args": [
+            "place_2"
+          ]
+        },
+        "value": false
+      },
+      {
+        "ref": {
+          "symbol": "fact_3",
+          "args": [
+            "player"
+          ]
+        },
+        "value": false
+      },
+      {
+        "ref": {
+          "symbol": "fact_4",
+          "args": [
+            "player"
+          ]
+        },
+        "value": false
+      },
+      {
+        "ref": {
+          "symbol": "fact_5",
+          "args": [
+            "player"
+          ]
+        },
+        "value": false
+      },
+      {
+        "ref": {
+          "symbol": "fact_6",
+          "args": [
+            "player"
+          ]
+        },
+        "value": false
+      }
+    ],
+    "outcomes": [
+      {
+        "endingId": "ending_1",
+        "condition": {
+          "all": [
+            {
+              "ref": {
+                "symbol": "fact_4",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "eq",
+              "value": true
+            },
+            {
+              "ref": {
+                "symbol": "fact_5",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "eq",
+              "value": true
+            },
+            {
+              "ref": {
+                "symbol": "fact_6",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "endingId": "ending_2",
+        "condition": {
+          "all": [
+            {
+              "ref": {
+                "symbol": "fact_3",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "eq",
+              "value": true
+            },
+            {
+              "ref": {
+                "symbol": "fact_4",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "eq",
+              "value": false
+            },
+            {
+              "ref": {
+                "symbol": "fact_5",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "endingId": "ending_3",
+        "condition": {
+          "all": [
+            {
+              "ref": {
+                "symbol": "fact_5",
+                "args": [
+                  "player"
+                ]
+              },
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      }
+    ],
+    "model": "gemma4:12b-it-qat-google",
+    "setupMode": "template",
+    "design": {
+      "commonSituation": "폭우가 쏟아지는 밤, 폐쇄를 앞둔 해안 기차역에서 플레이어는 실종된 언니를 찾기 위해 역무원 서윤을 만납니다. 서윤은 협조적인 태도로 은색 열쇠를 건네며 플레이어를 안내하지만, 사실 그녀는 과거 자신의 과실로 언니를 사고사하게 만들고 기록을 조작한 당사자입니다. 플레이어는 서윤의 안내를 따르며 기록실과 폐쇄 승강장 사이에서 진실을 추적해야 합니다.",
+      "routes": {
+        "ending_1": {
+          "approach": "서윤의 미세한 감정 변화와 모순된 행동을 포착하여 그녀를 압박하고, 감정적인 유대감을 형성하며 진실을 자백받는 전략입니다. 서윤이 느끼는 죄책감을 자극하여 스스로 무너지게 만들어야 합니다.",
+          "branchOpportunity": "서윤이 기록실로 향하는 길을 안내하며 불안해하는 순간, 그녀의 시선을 정면으로 마주하며 과거의 행적에 대해 구체적으로 질문할 때 갈라집니다.",
+          "payoff": "서윤의 고백을 통해 언니의 죽음과 자신의 과실을 모두 알게 되며, 그녀의 고통을 이해하고 용서함으로써 비극적인 진실을 수용합니다. 하지만 플레이어는 평생 지워지지 않을 언니의 죽음을 마주해야 하는 정신적 대가를 치릅니다."
+        },
+        "ending_2": {
+          "approach": "서윤의 안내를 최소한으로 활용하면서도, 그녀가 회피하는 기록실의 핵심 구역을 물리적으로 확보하고 독립적으로 증거를 수집하는 전략입니다. 서윤의 감정에 휘둘리지 않고 객관적인 자료를 확보하는 데 집중합니다.",
+          "branchOpportunity": "서윤이 특정 구역의 접근을 막으려 할 때, 그녀의 시선을 돌리거나 은색 열쇠를 이용해 그녀가 허락하지 않은 기록실 깊숙한 곳으로 침입할 때 갈라집니다.",
+          "payoff": "서윤의 도움 없이 기록실의 원본 문서를 통해 언니의 사고 경위를 파악합니다. 진실은 밝혀졌으나 서윤과의 관계는 차갑게 식으며, 진실을 알게 된 후의 허망함과 서윤에 대한 불신이라는 감정적 상처를 얻습니다."
+        },
+        "ending_3": {
+          "approach": "서윤이 제공하는 단서에만 의존하거나, 기록실의 겉핥기식 정보에 만족하며 서윤의 의도대로 움직이는 수동적인 전략입니다. 서윤이 설계한 경로를 그대로 따라가며 그녀의 통제 안에 머뭅니다.",
+          "branchOpportunity": "서윤이 기록실로 안내할 때 그녀의 말을 의심하지 않고 그대로 따르거나, 결정적인 증거가 담긴 구역에 접근할 기회가 왔음에도 서윤의 만류에 순응할 때 갈라집니다.",
+          "payoff": "언니의 행방이나 진실에 대해 아무것도 알아내지 못한 채 역을 떠납니다. 서윤은 자신의 비밀을 지켜내고 플레이어는 영원한 의문 속에 언니를 잃은 채 절망적인 미궁 속에 갇히게 됩니다."
+        }
+      }
+    }
+  }
+}
